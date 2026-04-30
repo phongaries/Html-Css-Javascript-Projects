@@ -1,0 +1,13 @@
+header {
+    display:flex;
+    flex:1;
+    align-items: center;
+}
+nav{
+    flex-grow: 1;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
