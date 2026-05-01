@@ -55,9 +55,6 @@ class Calculator {
     }
     getupdateDisplay(number){
         const stringNumber = number.toString();
-        if(stringNumber.includes('(') || stringNumber.includes(')')){
-            return stringNumber;
-        }
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
         const decimalDigits = stringNumber.split('.')[1];
         let integerDisplay;
