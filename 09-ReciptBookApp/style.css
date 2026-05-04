@@ -14,7 +14,48 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
 ul{
     display: block;
+}
+header{
+    display:block;
+    background-color: #0c2461;
+    padding:5px 10px;
+}
+h1{
+    font-family: monospace;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+.recipe-item > img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.recipe-item > h2{
+    margin:0;
+    padding:15px;
+    font-family: monospace;
+    font-size: 20px;
+    min-width: 350px;
+}
+.recipe-item > p{
+    padding:10px;
+    margin:0;
+    color: #777;
+}
+.recipe-item > a{
+    margin:0;
+    padding:10px;
+    background-color: #0c2461;
+    font-family: monospace;
+    font-size: 15px;
+    color:white;
+    min-width: 150px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
 }

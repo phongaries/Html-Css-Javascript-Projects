@@ -1,5 +1,5 @@
 const API_KEY = 'd16f6ed097bf4aad85fee27d01283a69';
-const recipeListEl = document.querySelector('recipe-list');
+const recipeListEl = document.querySelector('.recipe-list');
 
 function displayRecipes(recipes){
 
@@ -8,7 +8,7 @@ function displayRecipes(recipes){
         recipeItemEl.classList.add("recipe-item");
 
         const recipeImageEl = document.createElement("img");
-        recipeImageEl.scr = recipe.image;
+        recipeImageEl.src = recipe.image;
         recipeImageEl.alt = "recipes image";
 
         const recipeTitleEl = document.createElement("h2");
@@ -16,7 +16,7 @@ function displayRecipes(recipes){
 
         const recipeIngrediensEl = document.createElement("p");
         recipeIngrediensEl.innerHTML = `
-        <strong>Ingredients:</strong>${recipe.extendedIngredients}
+        <strong>Ingredients:</strong>${recipe.extendedIngredients
         .map((ingredients) => ingredients.original).join(", ")};
         `;
 
@@ -24,10 +24,11 @@ function displayRecipes(recipes){
         recipeLinkEl.href = recipe.sourceUrl;
         recipeLinkEl.innerText = "View Recipe";
 
-        recipeItemEl = appendChild(recipeImageEl);
-        recipeItemEl = appendChild(recipeTitleEl);
-        recipeItemEl = appendChild(recipeIngrediensEl);
-        recipeListEl = appendChild(recipeItemEl);
+        recipeItemEl.appendChild(recipeImageEl);
+        recipeItemEl.appendChild(recipeTitleEl);
+        recipeItemEl.appendChild(recipeIngrediensEl);
+        recipeItemEl.appendChild(recipeLinkEl);
+        recipeListEl.appendChild(recipeItemEl);
 
 
     });
