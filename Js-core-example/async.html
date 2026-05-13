@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const goStudy = new Promise( (resolve, reject) => {
+            setTimeout( () =>{
+              let wakeUpEarly = true;
+              if(wakeUpEarly === true){
+                resolve('You are hard-working person!');
+              } else{
+                reject('Sorry i could not make it today...');
+              };
+            },2000);
+          });
+        
+        // async function feelBad() {
+          // console.log('...Try to against your mind again...');
+          // 
+          // try{
+            // const trySuccess = await goStudy();
+            // console.log(trySuccess);
+            // console.log('LETSS FUCKING GOOOO');//dòng này chỉ chạy khi await ở trên chạy thành công
+          // } catch(error){
+            // console.error('Mission Failed:' + error);
+          // };
+        // };
+        // feelBad();
+        
+        console.log('...Try to against your mind again...');
+        goStudy.then( (message) =>{
+          console.log(message)
+        }) .catch( () =>{
+          console.log(message);
+        });
+    </script>
+</body>
+</html>
